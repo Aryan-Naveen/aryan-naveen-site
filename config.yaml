@@ -1,4 +1,4 @@
-baseURL: https://example.com
+baseURL: https://monumental-rabanadas-077874.netlify.app/
 languageCode: en-us
 title: Aryan Naveen
 theme: hugo-refresh
@@ -12,7 +12,7 @@ theme: hugo-refresh
 assetDir: "static"
 
 # Option to specify the default language of the theme
-# I.e., the landing language of your root 
+# I.e., the landing language of your root
 DefaultContentLanguage: en
 
 ## Option to disable additional language in your site.
@@ -35,9 +35,9 @@ Taxonomies:
 # https://bulkitv2.cssninja.io/_components-icons-fa.html
 
 params:
-  # parameter used to specify the number of article in each row 
+  # parameter used to specify the number of article in each row
   # for the summary pages, the possible options are: 2, 3, 4, 5 or 6
-  articlesPerRow: 3 
+  articlesPerRow: 3
 
   # option to specify the favicon image of the site
   # the path is relative to the folder "assetDir" of this configuration
@@ -59,7 +59,7 @@ params:
     # option to specify the default image in the summary list
     # the starting folder is configure in "assetDir" of this file
     defaultImage : "/images/default_summary.jpg"
-  
+
   # loading options
   loading:
     # option to specify the loading image
@@ -69,7 +69,7 @@ params:
   # main pages options
   mainPage:
     # option to specify the main font of the theme
-    fontFamily: "Open Sans" 
+    fontFamily: "Open Sans"
 
   # sidebar options
   sidebar:
@@ -85,7 +85,7 @@ params:
     fontFamily: "Open Sans"
     # option to show the little logos on the side of the navbar items
     showIcons: true
-    
+
   # 404 page options
   pagNotFound:
     # option to specify the main picture of the sidebar
@@ -102,15 +102,15 @@ params:
   homepage:
     # this options let you specify if you want a link to the homepage
     # it can be: "none", "menu", "footer" or "menu+footer"
-    linkPosition: "menu" 
+    linkPosition: "menu"
     # this options let you specify the text of the link to the homepage
-    linkText: ""  
+    linkText: ""
     # option to specify the title in the homepage
     title: Aryan Naveen
     # option to specify the subtitle in the homepage
     subtitle: Computer Science Student @ Harvard and Avid Reddit User
     # option to specify image in the homepage
-    image: "/static/images/avataaars.png" # worker.svg 
+    image: "/static/images/avataaars.png" # worker.svg
     # option to specify the width of the image in the homepage
     imageWidth: 500px
 
@@ -120,41 +120,41 @@ params:
     # the starting folder is configure in "assetDir" of this file
     logo: "/images/refresh-square.svg"
     # option to specify your contact email in the footer
-    email: 
+    email:
       link: aryan_naveen@college.harvard.edu
       title: My Email
     # option to specify your linkedin profile in the footer
-    linkedin: 
+    linkedin:
       link: in/aryan-naveen-218823192/
       title: My LinkedIn
-    # option to specify your facebook account in the footer; 
+    # option to specify your facebook account in the footer;
     # **uncomment** the lines below to show in footer
-    # facebook: 
+    # facebook:
     #   link: your.username
     #   title: Facebook
-    # option to specify your github account in the footer; 
+    # option to specify your github account in the footer;
     # **uncomment** the below lines to show in footer
-    github: 
+    github:
       link: Aryan-Naveen
       title: Github
-    # option to specify your gitlab account in the footer; 
+    # option to specify your gitlab account in the footer;
     # **uncomment** the below lines to show in footer
-    # gitlab: 
+    # gitlab:
     #   link: username
     #   title: Gitlab
     # option to specify your twitter username in the footer;
     # **uncomment** the below lines to show in footer
-    twitter: 
+    twitter:
        link: aryannaveen_
        title: Twitter
-    # option to specify your instagram username in the footer; 
+    # option to specify your instagram username in the footer;
     # **uncomment** the below lines to show in footer
-    # instagram: 
+    # instagram:
     #    link: username
     #    title: Instagram
-    # option to specify your telegram username in the footer; 
+    # option to specify your telegram username in the footer;
     # **uncomment** the below lines to show in footer
-    # telegram: 
+    # telegram:
     #    link: username
     #    title: Telegram
     # option to specify the copyright in the footer
