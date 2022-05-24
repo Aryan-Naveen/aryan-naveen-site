@@ -1,7 +1,7 @@
 ---
 title: "FRC: Power Up Robot"
 date: 2020-03-12T13:56:48-04:00
-draft: true
+draft: false
 hideLastModified: true
 summary: "Program lead for team that built robot to compete in the 2020 FRC competition: Power Up."
 summaryImage: "summary.png"

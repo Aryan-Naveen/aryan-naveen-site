@@ -2,7 +2,7 @@
 title: "CS 61: Systems Programming and Machine Organization Assignments"
 date: 2021-12-12T23:39:49+05:30
 tags: ["C++"]
-draft: true
+draft: false
 hideLastModified: true
 summary: "This course discussed the fundamentals of systems programming and the psets involved programming various components of a OS from scratch."
 summaryImage: "summary.png"

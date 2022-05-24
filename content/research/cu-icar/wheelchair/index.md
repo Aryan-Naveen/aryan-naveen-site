@@ -1,7 +1,7 @@
 ---
 title: "Environmental Mapping & Stability Prediction for Autonomous Wheelchair"
 date: 2019-06-17T23:53:00+01:00
-draft: true
+draft: false
 hideLastModified: true
 summary: "Developed novel pipeline that mapped surrounding terrain of autonomous wheelchair and predicted stability in order to avoid rollover."
 tags: ["C++", "Python", "ROS", "Solidworks", "Research"]

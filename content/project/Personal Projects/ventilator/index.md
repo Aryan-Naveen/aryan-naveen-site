@@ -1,7 +1,7 @@
 ---
 title: "OpenSource Ventilator"
 date: 2020-04-01T13:58:05-04:00
-draft: true
+draft: false
 
 summaryImage: "image2.jpg"
 summary: "Competed in competition hosted among Boston schools to design, build, and program a robot to beat Pacman in real life."

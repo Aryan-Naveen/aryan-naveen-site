@@ -2,7 +2,7 @@
 title: "Mathematical Derivation & Applications of Principal Component Analysis"
 date: 2021-12-12T23:39:49+05:30
 tags: ["Mathematics"]
-draft: true
+draft: false
 hideLastModified: true
 summary: "Many current scientific and technological advancements depend on incredibly large datasets. 
 These datasets often contain an incredibly large number of data points, each of which in turn contains multiple values.
@@ -41,8 +41,8 @@ summaryImage: "summary.png"
        f_2 \\
        \vdots \\
        f_m
-    \end{bmatrix} 
-    = 
+    \end{bmatrix}
+    =
     \begin{bmatrix}
        d_1 &amp; d_2 &amp; \cdots &amp; d_n
     \end{bmatrix}\end{aligned}\]</span></p>
@@ -120,7 +120,7 @@ summaryImage: "summary.png"
 <p ><em>Input:</em> <span class="math inline">\(X\)</span>, an <span class="math inline">\(m \times n\)</span> data matrix with <span class="math inline">\(m\)</span> features, each with <span class="math inline">\(n\)</span> data points.<br />
 <em>Standardize Data Matrix:</em></p>
 <ul>
-<li><p>Make the means of every variable zero: <span class="math inline">\(Z = X - 
+<li><p>Make the means of every variable zero: <span class="math inline">\(Z = X -
         \begin{bmatrix}
            \mu_{X_{(1)}} &amp; \dots &amp; \mu_{X_{(1)}}\\
            \vdots &amp; \ddots &amp; \vdots\\
@@ -157,23 +157,23 @@ summaryImage: "summary.png"
     X = \begin{bmatrix}
         171  &amp; 195 &amp; 157 &amp; 160 &amp; 178 &amp; 168 &amp; 171 &amp; 165 &amp; 175 &amp; 163 &amp; 158 &amp; 159 \\
         39  &amp; 46 &amp; 37 &amp; 38 &amp; 39 &amp; 39 &amp; 38 &amp; 41 &amp; 39 &amp; 44 &amp; 38 &amp; 37   \\
-        152  &amp; 98 &amp; 56 &amp; 131 &amp; 107 &amp; 59 &amp; 141 &amp; 57 &amp; 135 &amp; 57 &amp; 149 &amp; 80 
+        152  &amp; 98 &amp; 56 &amp; 131 &amp; 107 &amp; 59 &amp; 141 &amp; 57 &amp; 135 &amp; 57 &amp; 149 &amp; 80
     \end{bmatrix}\]</span></p>
 <h2 id="standardizing-the-dataset">Standardizing the Dataset</h2>
 <p>Prior to computing the principal components of the dataset, standardizing the input data matrix is crucial in order to leverage the certain definitions outlined above. This can be achieved by taking every element of the data matrix and subtracting the mean of the values in that element’s row from itself. Let <span class="math inline">\(Z\)</span> be the resulting data matrix.</p>
 <p>We can perform such an operation on the data matrix <span class="math inline">\(X\)</span> above as follows: <span class="math display">\[Z = X -  \begin{bmatrix}
            168.33 &amp; \cdots &amp; 168.33\\
-            39.58  &amp; \cdots &amp; 39.58 \\ 
+            39.58  &amp; \cdots &amp; 39.58 \\
           101.83 &amp; \cdots &amp; 101.83
         \end{bmatrix}\]</span> <span class="math display">\[\begin{aligned}
     Z = \begin{bmatrix}
-2.7 &amp; 26.7 &amp; -11.3 &amp; -8.3 &amp; 9.7 &amp; -0.3 &amp; 2.7 &amp; -3.3 &amp; 6.7 &amp; -5.3 &amp; -10.3 &amp; -9.3 \\ 
+2.7 &amp; 26.7 &amp; -11.3 &amp; -8.3 &amp; 9.7 &amp; -0.3 &amp; 2.7 &amp; -3.3 &amp; 6.7 &amp; -5.3 &amp; -10.3 &amp; -9.3 \\
 -0.6 &amp; 6.4 &amp; -2.6 &amp; -1.6 &amp; -0.6 &amp; -0.6 &amp; -1.6 &amp; 1.4 &amp; -0.6 &amp; 4.4 &amp; -1.6 &amp; -2.6 \\
-50.2 &amp; -3.8 &amp; -45.8 &amp; 29.2 &amp; 5.2 &amp; -42.8 &amp; 39.2 &amp; -44.8 &amp; 33.2 &amp; -44.8 &amp; 47.2 &amp; -21.8 
+50.2 &amp; -3.8 &amp; -45.8 &amp; 29.2 &amp; 5.2 &amp; -42.8 &amp; 39.2 &amp; -44.8 &amp; 33.2 &amp; -44.8 &amp; 47.2 &amp; -21.8
         \end{bmatrix}\end{aligned}\]</span></p>
 <p>Now, we find the covariance matrix of <span class="math inline">\(Z\)</span>:</p>
 <p><span class="math display">\[\begin{aligned}
-    C_Z = \frac{1}{n - 1} ZZ^T = 
+    C_Z = \frac{1}{n - 1} ZZ^T =
     \begin{bmatrix}
        117.697 &amp; 19.152 &amp; 72.970\\
        19.152 &amp; 7.720 &amp; -29.167 \\
@@ -203,17 +203,17 @@ Now, let <span class="math inline">\(\{{[x_2]}_\mathcal{B}, \cdots, {[x_n]}_\mat
 <p>As outlined in section [sec:stat background], we know that <span class="math inline">\(C_Z\)</span> is a symmetric matrix, and from Theorem [cov diagonalizable], we know that <span class="math inline">\(C_Z\)</span> has <span class="math inline">\(n\)</span> orthogonal eigenvectors. Let the normalized versions of these orthogonal eigenvectors be <span class="math inline">\(u_1, \dots, u_n\)</span>. We thus have:</p>
 <p><span class="math display">\[\underset{\mathcal{B}\leftarrow\mathcal{E}}{\mathcal{P}} = \underset{\mathcal{E}\leftarrow\mathcal{B}}{\mathcal{P}}^{-1} = [u_1 \dots u_n]^{-1}\]</span></p>
 <p>As <span class="math inline">\(u_1, \dots, u_n\)</span> are all orthonormal vectors, we know that <span class="math inline">\(\underset{\mathcal{E}\leftarrow\mathcal{B}}{\mathcal{P}}\)</span> is an orthogonal matrix and thus <span class="math inline">\(\underset{\mathcal{E}\leftarrow\mathcal{B}}{\mathcal{P}}^{-1} = \underset{\mathcal{E}\leftarrow\mathcal{B}}{\mathcal{P}}^T\)</span>. We thus have:</p>
-<p><span class="math display">\[\underset{\mathcal{B}\leftarrow\mathcal{E}}{\mathcal{P}} = \underset{\mathcal{E}\leftarrow\mathcal{B}}{\mathcal{P}}^T = 
+<p><span class="math display">\[\underset{\mathcal{B}\leftarrow\mathcal{E}}{\mathcal{P}} = \underset{\mathcal{E}\leftarrow\mathcal{B}}{\mathcal{P}}^T =
 \begin{bmatrix}
    u_1^T \\
    \vdots \\
-   u_n^T 
+   u_n^T
 \end{bmatrix}\]</span></p>
 <p>Before proving our selection of <span class="math inline">\(\underset{\mathcal{B}\leftarrow\mathcal{E}}{\mathcal{P}}\)</span> yields a diagonal covariance matrix of <span class="math inline">\(\widehat{Z}\)</span>, <span class="math inline">\(\widehat{C}_Z\)</span>, as required, we need to prove the following theorem:</p>
 <p>[the: zero mean] With <span class="math inline">\(\underset{\mathcal{B}\leftarrow\mathcal{E}}{\mathcal{P}}\)</span> as defined above and <span class="math inline">\(Z\)</span> having <span class="math inline">\(m\)</span> rows with mean 0 and <span class="math inline">\(n\)</span> columns, the transformed data matrix <span class="math inline">\(\widehat{Z}\)</span> also has all rows with mean 0.</p>
 <ol>
 <li><p>We have from our definition of <span class="math inline">\(\widehat{Z}\)</span> that: <span class="math display">\[\begin{aligned}
-         \widehat{Z} = \underset{\mathcal{B}\leftarrow \mathcal{E}}{\mathcal{P}}Z 
+         \widehat{Z} = \underset{\mathcal{B}\leftarrow \mathcal{E}}{\mathcal{P}}Z
      \end{aligned}\]</span></p>
 <p>Furthermore, using the definition of matrix multiplication, we can select an arbitrary row <span class="math inline">\(\widehat{Z}_{\{i\}}\)</span> and define it as follows: <span class="math display">\[\begin{aligned}
         \widehat{Z}_{(i)} &amp;= \begin{bmatrix} \underset{\mathcal{B}\leftarrow\mathcal{E}}{\mathcal{P}}_{(i)} Z_{[0]} &amp; \underset{\mathcal{B}\leftarrow\mathcal{E}}{\mathcal{P}}_{(i)} Z_{[1]} &amp; \cdots &amp; \underset{\mathcal{B}\leftarrow\mathcal{E}}{\mathcal{P}}_{(i)} Z_{[n]}  \end{bmatrix} \\

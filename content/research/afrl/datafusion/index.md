@@ -1,7 +1,7 @@
 ---
 title: "Decentralized Correlation Agnostic Data Fusion Research"
 date: 2019-06-17T23:53:00+01:00
-draft: true
+draft: false
 hideLastModified: true
 summary: "Research in further optimizing data fusion techniques in environments where correlation is unknown between two data sources."
 tags: ["Mathematics", "Algorithm", "Python", "Research"]
@@ -23,8 +23,8 @@ summaryImage: "summary.jpg"
 }
 
 .button1 {
-  background-color: white; 
-  color: black; 
+  background-color: white;
+  color: black;
   border: 2px solid #4CAF50;
 }
 
@@ -34,8 +34,8 @@ summaryImage: "summary.jpg"
 }
 
 .button2 {
-  background-color: white; 
-  color: black; 
+  background-color: white;
+  color: black;
   border: 2px solid #008CBA;
 }
 
@@ -67,7 +67,7 @@ You can find the code that simulated these various data fusion algorithms, inclu
 
 <br>
 {{< tabs
-    file1="/static/content/research/afrl/tab_contents/one.md" title1="Citation & Publication PDF" 
-    file2="/static/content/research/afrl/tab_contents/two.md" title2="Poster" 
-    file3="/static/content/research/afrl/tab_contents/three.md" title3="Conference Presentation Video" 
+    file1="/static/content/research/afrl/tab_contents/one.md" title1="Citation & Publication PDF"
+    file2="/static/content/research/afrl/tab_contents/two.md" title2="Poster"
+    file3="/static/content/research/afrl/tab_contents/three.md" title3="Conference Presentation Video"
 >}}

@@ -1,7 +1,7 @@
 ---
 title: "Drone Localization in Challenging Environments Research"
 date: 2018-10-09T14:30:07-04:00
-draft: true
+draft: false
 summary: "Applied novel data fusion algorithm to enable autonomous drone flights in unstructured environments."
 
 tags: ["Robotics", "Electronics", "Solidworks", "Python"]

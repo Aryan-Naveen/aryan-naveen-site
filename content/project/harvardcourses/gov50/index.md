@@ -1,7 +1,7 @@
 ---
 title: "The Relationship Between Former Soviet States’ Civil Liberties and Wealth"
 date: 2022-05-12T00:04:05-04:00
-draft: true
+draft: false
 hideLastModified: true
 summary: "We set out to determine how civil liberties in former Soviet Socialist
 Republics developed either positively or negatively following the
@@ -155,7 +155,7 @@ for (year in years) {
     km <- kmeans(data.pca$x[, 1:2], centers = 3)
     freedomOfSpeech <- c()
     for (i in 1:3) {
-    freedomOfSpeech <- c(freedomOfSpeech, median(data.pca$x[, 1][which(km$cluster == i)])) 
+    freedomOfSpeech <- c(freedomOfSpeech, median(data.pca$x[, 1][which(km$cluster == i)]))
     }
     freedomOfSpeech <- order(freedomOfSpeech, decreasing = !(year %in% c(1992, 1993)))
     for (i in 1:3) {
@@ -167,7 +167,7 @@ for (year in years) {
         timeclusters[i, year - begYear + 1] <- which(freedomOfSpeech == clust)
     }
     }
-    
+
     if(year == 1992){
     cols <- c(4, 2, 3)
     plot(-data.pca$x[which(!(pcadata$country %in% ussr)), 1], -data.pca$x[which(!(pcadata$country %in% ussr)), 2], col = cols[km$cluster[which(!(pcadata$country %in% ussr))]],  cex=1.5, xlab = "PCA component 1", ylab = "PCA component 2", main= "1992 Civil Liberties K-means clusters")
@@ -224,15 +224,15 @@ constant.
 {{< codeWide >}}
 par(mfrow = c(2, 2))
 for (i in 1:3) {
-    plot(1991:2019, timeclusters[which(rownames(timeclusters) == ussr[i]), 17:45], 
+    plot(1991:2019, timeclusters[which(rownames(timeclusters) == ussr[i]), 17:45],
         type = "l", col = i, ylim = c(1, 3), xlab = "Year", ylab = "Cluster",
         main = ussr[i])
 }
-plot(1991:2019, timeclusters[which(rownames(timeclusters) == "Georgia"), 17:45], 
+plot(1991:2019, timeclusters[which(rownames(timeclusters) == "Georgia"), 17:45],
         type = "l", col = 4, ylim = c(1, 3), xlab = "Year", ylab = "Cluster",
         main = "All other former Soviet states")
 for (i in 5:length(ussr)) {
-    points(1991:2019, timeclusters[which(rownames(timeclusters) == ussr[i]), 17:45], 
+    points(1991:2019, timeclusters[which(rownames(timeclusters) == ussr[i]), 17:45],
         type = "l", col = i, ylim = c(1, 3))
 }
 {{< /codeWide >}}
@@ -263,7 +263,7 @@ plot(1992:2019, gdp[which(gdp$Country.Code == "EST"), 34:61], type = "l",
         col = timeclusters[which(rownames(timeclusters) == "EST"), 45] + 1,
         ylim = c(0, 25000), xlab = "Year", ylab = "GDP per capita (US$)",
         main = "Former Soviet states' GDP per capita over time")
-legend("topleft", legend = c("Cluster 1", "Cluster 2", "Cluster 3"), 
+legend("topleft", legend = c("Cluster 1", "Cluster 2", "Cluster 3"),
         col = c(2, 3, 4), lty = 1)
 
 for (i in 2:length(ussr)) {
@@ -311,7 +311,7 @@ ussrclust3 <- subset(ussrgdp, cluster == 3)
 difinmean <- matrix(NA, 2019 - 1995 + 1, 3, dimnames = list(c(1995:2019), c("estimate", "lower", "upper")))
 for(i in 1995:2019) {
     difinmean[i - 1994, 1] <- mean(ussrclust1[, i - 1993]) - mean(ussrclust2[, i - 1993])
-    difinmean[i - 1994, 2:3] <- mean(ussrclust1[, i - 1993]) - mean(ussrclust2[, i - 1993]) + 
+    difinmean[i - 1994, 2:3] <- mean(ussrclust1[, i - 1993]) - mean(ussrclust2[, i - 1993]) +
     c(-1, 1) * qnorm(0.975) * sqrt(var(ussrclust1[, i - 1993]) / nrow(ussrclust1) + var(ussrclust2[, i - 1993]) / nrow(ussrclust2))
 }
 difinmean <- as.data.frame(difinmean)
@@ -326,7 +326,7 @@ segments(1995:2019, difinmean$lower, 1995:2019, difinmean$upper, lty = 2)
 {{< codeWide >}}
 for(i in 1995:2019) {
     difinmean[i - 1994, 1] <- mean(ussrclust1[, i - 1993]) - mean(ussrclust3[, i - 1993])
-    difinmean[i - 1994, 2:3] <- mean(ussrclust1[, i - 1993]) - mean(ussrclust3[, i - 1993]) + 
+    difinmean[i - 1994, 2:3] <- mean(ussrclust1[, i - 1993]) - mean(ussrclust3[, i - 1993]) +
     c(-1, 1) * qnorm(0.975) * sqrt(var(ussrclust1[, i - 1993]) / nrow(ussrclust1) + var(ussrclust3[, i - 1993]) / nrow(ussrclust3))
 }
 plot(1995:2019, difinmean$estimate, col = 2, pch = 16,
@@ -339,7 +339,7 @@ segments(1995:2019, difinmean$lower, 1995:2019, difinmean$upper, lty = 2)
 {{< codeWide >}}
 for(i in 1995:2019) {
     difinmean[i - 1994, 1] <- mean(ussrclust3[, i - 1993]) - mean(ussrclust2[, i - 1993])
-    difinmean[i - 1994, 2:3] <- mean(ussrclust3[, i - 1993]) - mean(ussrclust2[, i - 1993]) + 
+    difinmean[i - 1994, 2:3] <- mean(ussrclust3[, i - 1993]) - mean(ussrclust2[, i - 1993]) +
     c(-1, 1) * qnorm(0.975) * sqrt(var(ussrclust3[, i - 1993]) / nrow(ussrclust3) + var(ussrclust2[, i - 1993]) / nrow(ussrclust2))
 }
 plot(1995:2019, difinmean$estimate, col = 2, pch = 16,
